@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Secciones generales */
+body {
+  background: #1a1a1d;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* Estilo para la página de registro */
+.sign-up-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+}
+
+/* Contenedor de formulario de registro */
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00d4ff; /* Azul cian */
+  border: 3px solid #00a3cc; /* Azul cian oscuro */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Título del formulario */
+.sign-up-container h1 {
+  font-size: 2.5rem;
+  color: #00d4ff; /* Azul cian */
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+  animation: glow 2s infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo para el formulario */
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Campo de entrada */
+.form-input {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-input label {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #00d4ff;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #333;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00a3cc; /* Azul cian oscuro */
+  width: 100%;
+}
+
+.input-icon {
+  color: #00d4ff; /* Azul cian */
+  margin-right: 10px;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+  border: 1px solid #00a3cc; /* Azul cian oscuro */
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+}
+
+.form-input input:focus {
+  background: #00a3cc; /* Azul cian oscuro */
+  border-color: #00d4ff; /* Azul cian */
+  box-shadow: 0 0 10px #00d4ff;
+  outline: none;
+}
+
+/* Estilo para el botón de registro */
+.sign-up-btn {
+  padding: 12px;
+  background: #00a3cc; /* Azul cian oscuro */
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 0 10px #00d4ff; /* Azul cian */
+  text-shadow: 0 0 5px #fff;
+  width: 100%;
+}
+
+.sign-up-btn:hover {
+  background: #00d4ff; /* Azul cian */
+  transform: scale(1.1);
+}
+
+.sign-up-btn:active {
+  transform: scale(0.98);
+}
+
+/* Animación de resplandor */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .sign-up-container {
+    padding: 30px;
+  }
+
+  .sign-up-container h1 {
+    font-size: 2rem;
+  }
+
+  .form-input input {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Fuente arcade */
+
+.cards {
+  padding: 50px 20px;
+  background: linear-gradient(45deg, #1e1e1e, #282828);
+  color: #fff;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.cards h1 {
+  color: #00d4ff; /* Azul cian */
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+  margin-bottom: 40px;
+  animation: glow 2s infinite alternate;
+}
+
+/* Estilos de la sección de información */
+.info {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.info__title {
+  color: #00d4ff; /* Azul cian */
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+  margin-bottom: 20px;
+}
+
+.info__text {
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  line-height: 1.6;
+}
+
+/* Estilos del contenedor de las tarjetas */
+.cards__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards__items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de la tarjeta */
+.card-item {
+  background: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 10px #000;
+  width: 300px;
+}
+
+.card-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00d4ff, 0 0 30px #00a3cc;
+}
+
+.card-item__link {
+  text-decoration: none;
+}
+
+.card-item__pic-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Altura fija para las imágenes */
+  width: 100%; /* Ancho adaptable al contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item__pic-wrap::before {
+  content: attr(data-category);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #00a3cc; /* Azul cian oscuro */
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-shadow: 0 0 5px #000;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.card-item__img {
+  width: auto; /* Mantiene la proporción */
+  height: 100%; /* Ajusta al alto del contenedor */
+  display: block;
+  object-fit: cover; /* Recorta si es necesario */
+  border-bottom: 5px solid #00d4ff;
+}
+
+.card-item__info {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-item__text {
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 0 0 5px #fff;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+  }
+  to {
+    text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+  }
+}

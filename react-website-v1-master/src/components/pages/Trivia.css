@@ -1,0 +1,244 @@
+/* General Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+header {
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease-in-out;
+}
+header h1 {
+  font-size: 2.5rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+/* Topics Container */
+.topics-container {
+  animation: fadeInUp 1s ease-in-out;
+}
+.topics-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Grid Layout for Topics */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Topic Cards */
+.topic-card {
+  background-color: #27293d;
+  border: 2px solid #00d4ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.topic-card h3 {
+  font-size: 1.5rem;
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+.topic-card ul {
+  list-style: none;
+  padding: 0;
+}
+.topic-card li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #c4c4c4;
+}
+.topic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.5);
+}
+
+/* Topic Description */
+.topic-description {
+  background-color: #27293d;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  margin-top: 30px;
+}
+.topic-description h2 {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+.topic-description p {
+  font-size: 1.2rem;
+  color: #c4c4c4;
+  margin-bottom: 20px;
+}
+.topic-description ul {
+  list-style: none;
+  padding: 0;
+}
+.topic-description ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #c4c4c4;
+}
+.topic-description button {
+  background-color: #00d4ff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.topic-description button:hover {
+  background-color: #00a3cc;
+}
+
+/* Question Container */
+.question-container {
+  animation: fadeInUp 1s ease-in-out;
+  text-align: left;
+  padding: 30px;
+  background-color: #27293d;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.question-container .stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.question-container .stats .heart {
+  color: #ff6868;
+}
+.question-container .stats .timer {
+  color: #ffd700;
+}
+.question-container h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+.question-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c4c4c4;
+}
+.answer-options button {
+  display: block;
+  background-color: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.answer-options button:hover {
+  background-color: #00a3cc;
+  transform: translateY(-3px);
+}
+
+/* Results */
+.result-container {
+  animation: fadeInUp 1s ease-in-out;
+  padding: 30px;
+  background-color: #27293d;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.result-container h3 {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+.result-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c4c4c4;
+}
+.result-container button {
+  background-color: #00d4ff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.result-container button:hover {
+  background-color: #00a3cc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón de "Siguiente pregunta" con estilo de videojuego */
+.next-button {
+  background-color: #ff9800; /* Color de fondo anaranjado */
+  color: white; /* Color del texto */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: 3px solid #e65100; /* Borde con color más oscuro */
+  border-radius: 12px; /* Bordes redondeados */
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; /* Transición suave */
+  text-transform: uppercase;
+  margin-top: 20px; /* Espacio arriba del botón */
+}
+
+/* Efecto de hover */
+.next-button:hover {
+  background-color: #ff5722; /* Cambia a color más oscuro cuando pasas el cursor */
+  transform: scale(1.1); /* Aumenta el tamaño del botón */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+}
+
+/* Efecto cuando el botón es presionado */
+.next-button:active {
+  background-color: #d32f2f; /* Cambia el color de fondo cuando se presiona */
+  transform: scale(1.05); /* Reduce el tamaño ligeramente */
+}
